@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_exam_user,access_exam_user,model_ensa_exam,base.group_user,1,1,1,1
+access_result_user,access_result_user,model_ensa_result,base.group_user,1,1,1,1
+access_room_user,access_room_user,model_ensa_room,base.group_user,1,1,1,1
+access_student_user,access_student_user,model_ensa_student,base.group_user,1,1,1,1
+access_subject_user,access_subject_user,model_ensa_subject,base.group_user,1,1,1,1
+access_teacher_user,access_teacher_user,model_ensa_teacher,base.group_user,1,1,1,1

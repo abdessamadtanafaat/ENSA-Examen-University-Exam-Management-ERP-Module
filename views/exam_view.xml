@@ -1,0 +1,52 @@
+<odoo>
+    <!-- Form View -->
+    <record id="view_exam_form" model="ir.ui.view">
+        <field name="name">exam.form</field>
+        <field name="model">ensa.exam</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="type"/>
+                        <field name="date"/>
+                        <field name="room_id"/>
+                        <field name="teacher_id"/>
+                        <field name="subject_id"/>
+                        <field name="student_ids" widget="many2many_tags"/>
+
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- List View -->
+    <record id="view_exam_list" model="ir.ui.view">
+        <field name="name">exam.list</field>
+        <field name="model">ensa.exam</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="type"/>
+                <field name="date"/>
+                <field name="room_id"/>
+                <field name="teacher_id"/>
+                <field name="student_ids"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="view_exam_search" model="ir.ui.view">
+        <field name="name">exam.search</field>
+        <field name="model">ensa.exam</field>
+        <field name="arch" type="xml">
+            <search>
+                <filter string="DS" name="ds" domain="[('type', '=', 'ds')]"/>
+                <filter string="Final" name="final" domain="[('type', '=', 'final')]"/>
+                <filter string="Retake" name="retake" domain="[('type', '=', 'retake')]"/>
+            </search>
+        </field>
+    </record>
+</odoo>
